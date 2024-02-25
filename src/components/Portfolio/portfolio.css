@@ -1,0 +1,33 @@
+.skill-info{
+    margin-top: 30px;
+}
+.title{
+    animation: title 1s ease-in-out;
+}
+@keyframes title {
+    0%{
+        transform: translateY(-50%);
+    }
+}
+.content{
+    animation: content 1s ease-in-out;
+}
+@keyframes content {
+    0%{
+        transform: translateX(50%);
+    }
+}
+@media (max-width: 768px) {
+    .content{
+        margin-top: 15%;
+    }
+}
+
+.content-info{
+    animation: contentwe 1s ease-in-out;
+}
+@keyframes contentwe {
+    0%{
+        transform: translateX(-50%);
+    }
+}

@@ -1,38 +1,127 @@
-.App {
-  text-align: center;
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans:ital,wght@0,100..900;1,100..900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Protest+Revolution&display=swap');
+:root{
+    --primary-white: #ffffff;
+    --primary-blue: #3d82f2;
+    --primary-dark: #000000;
+    --primary-red: #7e0404;
+    --primary-hover-red: #f60b0b;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+body{
+    font-family: "Noto Sans", sans-serif;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
+/*  --------Navbar------    */
+
+nav{
+    z-index: 2;
+}
+nav ul li {
+    text-transform: uppercase;
   }
+.navbar-brand{
+    font-family: "Protest Revolution", sans-serif;
+    max-width: 17.25rem;
+    padding: 0 !important;
+}
+@media (max-width: 768px) {
+    .navbar-brand{
+        width: 7rem;
+    }
+}
+nav a.nav-link{
+    font-weight: 400;
+    letter-spacing: 0.175rem;
+    margin: 10PX;
+    color: var(--primary-blue) !important;
+}
+.navbar-nav  li  a{
+    margin: 0 0.75rem;
+    color: var(--primary-white);
+    border-top: 0.1875rem solid var(--primary-white);
+}
+a.navbar-brand.logo{
+    font-size: 50px !important;
+}
+.logo{
+    width: 16.25rem;
+    color: var(--primary-white) !important;
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+.navbar-nav > li > a.active,
+.navbar-nav > li > a.active:focus,
+.navbar-nav > li > a:hover{
+    color: var(--primary-white) !important;
+    border-top: 0.1875rem solid var(--primary-blue);
 }
 
-.App-link {
-  color: #61dafb;
+
+/*   ------ Header  -------    */
+
+
+.header-wrapper{
+    position: relative;
+    background: url(laptop-bg1.jpg) no-repeat;
+    background-size: cover;
+    background-position: center;
+    height: 90dvh;
+}
+.main-info{
+    display: flex;
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
+.main-info h1{
+    color: #ffffff;
+    text-transform: uppercase;
+}
+@media (max-width: 768px) {
+    .main-info h1{
+        font-size: 1.7rem !important;
+    }
+    .typed-text{
+        font-size: 1.2rem !important;
+    }
+}
+.typed-text{
+    font-size: 2rem;
+    color: var(--primary-white);
+    font-family: monospace;
+}
+.btn-main-offer{
+    color: var(--primary-white);
+    background-color: var(--primary-hover-red);
+    text-decoration: none;
+    border-radius: 4px;
+    padding: 10px 12px 12px 12px;
+    margin: 2rem;
+    opacity: .9;
+}
+.btn-main-offer:hover{
+    text-decoration: none;
+    opacity: 1;
+    transform: scale(1.1);
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+/*   ------ Particles  -------    */
+.canvas-part{
+    position: absolute;
+    z-index: 1;
 }
+
+/*      ------ Responsive  -------      */
+@media (max-width: 768px) {
+    .canvas-part{
+        display: none;
+    }
+}
+
+/*      ------ About  -------      */
